@@ -238,3 +238,27 @@ Multiple Way create an object:
     => Reusable structure banana ho (like blueprint for users, products, etc.) 
     => Class me methods aur properties easily manage hote hain.
 
+Q-10: Fix this code
+ 
+    function double(arr){
+        arr.foreach(function(val){
+          val*2;
+        });
+        return arr;
+    }
+    console.log(double([1,2,3])); // [1,2,3]
+    
+What actually happens =>
+
+=> You call double([1, 2, 3]).
+=> Inside the function, you loop through each element (val) with forEach.
+=> But inside the forEach, you do val * 2 — and you don’t store or return that result anywhere.
+=> forEach also doesn’t return a new array — it just runs a function for each element.
+=> So the array arr never changes.
+
+    function double(arr){
+       arr.map(function(val){
+           return val*2;
+       })
+    }
+    console.log(double([1,2,3]));  //[ 2,4,6]
