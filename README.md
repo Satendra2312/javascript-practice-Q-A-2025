@@ -1,4 +1,5 @@
 Q-1: Fix This Code
+------------------
 let x = 5;
 if (x = 5) {
   console.log(x);
@@ -34,3 +35,104 @@ Summary
 ❌ Wrong: if (x = 5) → assigns value
 
 ✅ Correct: if (x === 5) → compares value & type
+
+Q-2: What is diff b/w let and var in javascript?
+---------------
+
+Ans-: var is a function-scoped and let is a blocked scopeed. Variable decleare with the var and hoisted to the top of their function scope. while variable decleare with the let are not hoisted.
+
+
+Q-3: Fix this code
+----------------
+let arr=[1,2,3];
+arr.push(4);
+console.log(arr);
+
+Ans-: This code already corrected and this console print [1, 2, 3, 4]
+       push add 4 to the  end of array.
+
+Q-4: What is function decleriation in javascript?
+--------------------------------------------------
+
+Ans-: A function decleriation is way to defined function in javascript using "Function" keyword followed by a function name a set of parantheses. and st of curly brackets.
+
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("Satendra Kumar");  // Output: Hello, Satendra Kumar!
+
+Q-5: Fix the Code
+-----------------
+let arr = [1,2,3];
+for (let i =0; i< arr.length; i++){
+    console.log(arr[i]);
+}
+
+Ans-: This code is already correct and console print 
+      1
+      2
+      3
+       
+Explanation=>
+
+arr.length → returns 3 (the total number of elements).
+The for loop runs from i = 0 to i < 3.
+arr[i] prints each element one by one.
+
+Q-6: What is an array in javascript?
+-------------------------------------
+Ans-: An array is a data structure thar store  collection of elements. which can be an any of data type.
+ Array in javascript dyanamic and can grow or srink to size if as needes.
+
+
+Q-7: Fix this code
+------------------
+function greet(name){
+    console.log(`Hello, ${name}!`);
+}
+greet("Satendra");
+
+Ans-: this code already correct and print 'Hello, Satendra!'
+
+Q-8: What is this keyword in javasrcipt?
+-------------------------------------------
+Ans-: The this keyword refers to the object that currently excuting the code. Its value depend on how and where the function is called.
+
+Example: 
+1 =>  Global context
+      console.log(this); //In browserc-> window object
+
+2 =>  Inside a object method
+      const person ={
+        name: "satendra",
+        greet: function(){
+            console.log(this.name);
+        }
+      }
+      person.greet(); //Satendra
+
+3 => Inside a regular function
+     function greet(){
+        console.log(this);
+     }
+     greet();// strict mode: undefined  || Non strict mode : window
+
+4 => Inside a cunstrutor
+     function user(name){
+          this.name= name;
+     }
+     const u1 =new user("satendra");
+    console.log(u1.name); //Satendra
+
+5 => Inside an arrow function
+     const obj ={
+        name: "satendra",
+        greet:()=>{
+            console.log(this.name);
+        }
+     }
+     obj.greet();   //undefined
+  
+    Arrow functions apna khud ka this nahi banate —
+    wo apne outer (parent) scope se this inherit karte hain.
