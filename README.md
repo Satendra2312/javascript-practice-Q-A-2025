@@ -34,6 +34,3 @@ Summary
 ❌ Wrong: if (x = 5) → assigns value
 
 ✅ Correct: if (x === 5) → compares value & type
-
-Done
-------
