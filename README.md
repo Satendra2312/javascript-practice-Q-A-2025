@@ -85,6 +85,43 @@ Q-6: What is an array in javascript?
 Ans-: An array is a data structure thar store  collection of elements. which can be an any of data type.
  Array in javascript dyanamic and can grow or srink to size if as needes.
 
+ Multiple way create in array:
+
+ 1-: Using array literal[]
+
+    const fruits =["Apple","Banana","Mango"];
+
+    When to use:    
+    => Ye sabse simple aur fast method hai.
+    => Jab tumhe ek fixed ya normal list chahiye.
+    => 99% cases me isi ka use hota hai.
+
+2-: Using new Array() construtor
+
+    const number = new Array(10,20,30);
+    
+    When to use:
+    => Rarely use hota hai.
+    => Useful jab tumhe fixed length empty array banana ho.
+
+
+3-: using Array.of()
+ 
+    const arr = Array.of(5);
+    console.log(arra); // [5]
+    
+    When to use:
+    => Jab tumhe number se hi array banana ho, aur new Array(5) jaise confusion avoid karna ho.
+
+4-: Using Array.from()
+
+    const arr = Array.from("HELLO");
+    console.log(arra); //['H','E','L','L','O']
+
+    When to use:
+    => Jab tumhe iterable (string, Set, Map, NodeList, etc.) se array banana ho.
+    => Useful in DOM, string conversion, or unique list making.
+
 
 Q-7: Fix this code
 ------------------
