@@ -143,22 +143,41 @@ Ans-: An object is a collection of key-value pairs. where the key are string and
 
 Multiple Way create an object:
 
-    1 => Using Object literals:
+1 => Using Object literals:
+
     const car ={name:"Tesla", model:"s"};
 
-    2 => Using new object():
+    When to use:
+    => Jab simple data store karna ho.
+    => Static / small object chahiye (ek hi object banaana hai).
+    => Most common and easiest way.
+
+2 => Using new object():
+
     const car = new object();
     car.brand="tata";
     car.color="red";
 
-    3 => Using Constructor function
+     When to use:
+    => Bahut rarely use hota hai.
+    => Same result deta hai jaise {}, but zyada verbose hai.
+    => Useful only jab dynamically properties assign karni ho after object creation.
+
+3 => Using Constructor function
+
     function persion(name,age){
         this.name=name;
         this.age=age;
     }
     const p1 =new person("satendra",25);
 
-    4 => Using class (ES6)
+    When to use:
+    => Jab multiple similar objects banana ho.
+    => Function ke andar this har naye object ko represent karta hai.
+    => Reusable template jaisa kaam karta hai.
+
+ 4 => Using class (ES6)
+
     class person{
         constructor(name,age){
             this.name=name;
@@ -166,4 +185,9 @@ Multiple Way create an object:
         }
     }
     const p2 = new person("Rocky", 25);
+
+    When to use:
+    => Jab modern, OOP-style code likhna ho. 
+    => Reusable structure banana ho (like blueprint for users, products, etc.) 
+    => Class me methods aur properties easily manage hote hain.
 
