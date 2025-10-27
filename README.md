@@ -251,9 +251,13 @@ Q-10: Fix this code
 What actually happens =>
 
 => You call double([1, 2, 3]).
+
 => Inside the function, you loop through each element (val) with forEach.
+
 => But inside the forEach, you do val * 2 — and you don’t store or return that result anywhere.
+
 => forEach also doesn’t return a new array — it just runs a function for each element.
+
 => So the array arr never changes.
 
     function double(arr){
