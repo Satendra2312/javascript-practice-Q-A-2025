@@ -56,11 +56,11 @@ Q-4: What is function decleriation in javascript?
 
 Ans-: A function decleriation is way to defined function in javascript using "Function" keyword followed by a function name a set of parantheses. and st of curly brackets.
 
-function greet(name) {
-  console.log("Hello, " + name + "!");
-}
-
-greet("Satendra Kumar");  // Output: Hello, Satendra Kumar!
+    function greet(name) {
+      console.log("Hello, " + name + "!");
+    }
+    
+    greet("Satendra Kumar");  // Output: Hello, Satendra Kumar!
 
 Q-5: Fix the Code
 -----------------
@@ -100,10 +100,13 @@ Q-8: What is this keyword in javasrcipt?
 Ans-: The this keyword refers to the object that currently excuting the code. Its value depend on how and where the function is called.
 
 Example: 
+
 1 =>  Global context
+
       console.log(this); //In browserc-> window object
 
 2 =>  Inside a object method
+
       const person ={
         name: "satendra",
         greet: function(){
@@ -113,12 +116,14 @@ Example:
       person.greet(); //Satendra
 
 3 => Inside a regular function
+
      function greet(){
         console.log(this);
      }
      greet();// strict mode: undefined  || Non strict mode : window
 
 4 => Inside a cunstrutor
+
      function user(name){
           this.name= name;
      }
@@ -126,6 +131,7 @@ Example:
     console.log(u1.name); //Satendra
 
 5 => Inside an arrow function
+
      const obj ={
         name: "satendra",
         greet:()=>{
