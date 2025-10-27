@@ -136,3 +136,34 @@ Example:
   
     Arrow functions apna khud ka this nahi banate —
     wo apne outer (parent) scope se this inherit karte hain.
+
+Q-9: What is an object in javascript?
+-------------------------------------
+Ans-: An object is a collection of key-value pairs. where the key are string and value can be any data type. Object in javascript are dyanamic and properties removed or added in runtime.
+
+Multiple Way create an object:
+
+    1 => Using Object literals:
+    const car ={name:"Tesla", model:"s"};
+
+    2 => Using new object():
+    const car = new object();
+    car.brand="tata";
+    car.color="red";
+
+    3 => Using Constructor function
+    function persion(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    const p1 =new person("satendra",25);
+
+    4 => Using class (ES6)
+    class person{
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }
+    }
+    const p2 = new person("Rocky", 25);
+
