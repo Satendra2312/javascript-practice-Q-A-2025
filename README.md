@@ -125,10 +125,11 @@ Ans-: An array is a data structure thar store  collection of elements. which can
 
 Q-7: Fix this code
 ------------------
-function greet(name){
-    console.log(`Hello, ${name}!`);
-}
-greet("Satendra");
+
+    function greet(name){
+        console.log(`Hello, ${name}!`);
+    }
+    greet("Satendra");
 
 Ans-: this code already correct and print 'Hello, Satendra!'
 
