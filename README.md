@@ -241,7 +241,7 @@ Multiple Way create an object:
 Q-10: Fix this code
  
     function double(arr){
-        arr.foreach(function(val){
+        arr.forEach(function(val){
           val*2;
         });
         return arr;
